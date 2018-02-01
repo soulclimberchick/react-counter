@@ -13,17 +13,26 @@
 
     <script type="text/babel">
        class Greeting extends React.Component {
+         constructor(props){
+           super(props);
+           this.state = {
+             message: "We are excited that you are here!"
+           }
+         }
+
          render() {
            return (
              <div>
                <h1>Hello {this.props.name}!</h1>
+               <h3>{this.state.message}</h3>
              </div>
            );
          }
        }
 
        ReactDOM.render(
-         <Greeting name="Bloc Student"/>, document.getElementById('app')
+         <Greeting
+         name="Bloc Student"/>, document.getElementById('app')
        );
     </script>
   </body>
